@@ -82,3 +82,15 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.welcome_email(User.first)
   end
 end
+
+#Añadir gema dotenv para configurar variables en entorno de desarrollo y test en el Gemfile
+gem 'dotenv-rails' 
+
+#Añadir archivo .env en la raiz del proyecto para colocar las variables de entorno
+GMAIL_USERNAME=exampleactionmailer@gmail.com
+
+GMAIL_PASSWORD=ejemplo1234
+
+#Modificar configuracion smtp en el entorno de desarrollo
+
+#Añadir .env al archivo .gitignore para que no sea visible en el repositorio
